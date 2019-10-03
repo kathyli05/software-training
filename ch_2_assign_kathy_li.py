@@ -4,23 +4,28 @@ while True:
 	
 	if user_action == "list":
 		print(teams)
-		return
+		continue
 	
 	elif user_action == "remove": 
-		delete_team_input = int(input("Which team would you like to remove? Enter 0 to return to the main menu."))
-		if delete_team_input == "0":
-			return
-		elif delete_team_input in teams.keys():
-			teams.pop(delete_team_input)
-			print("Team " + delete_team_input + " has been removed.")
+		delete_team = int(input("Which team would you like to remove? Enter 0 to continue to the main menu."))
+		if delete_team == "0":
+			continue
+		elif delete_team in teams.keys():
+			teams.pop(delete_team)
+			print("Team " + delete_team + " has been removed.")
 		else: 
-			print("Team " + delete_team_input " has not been found. Returning to main menu...")
-			return
+			print("Team " + delete_team + " has not been found. Returning to main menu...")
+			continue
 	
-#	elif user_action == "modify": 
-#		update_team_input = input("which team would you like to modify?")
-#		if update_team_input in teams.keys():
-#			print(teams[update_team_input])
+	elif user_action == "modify": 
+		update_team = input("Which team would you like to modify?" )
+		update_variable = input("Which field would you like to modify? ")
+		change = input("Enter the new value. ")
+		if update_team_input in teams.keys():
+			teams[update_team][update_variable] = change
+		else:
+			print("Team " + update_team + " was not found. Returning to main menu...")
+			continue
 #			area_of_update_team = input("Which area of the team would you like to update?")
 			
 #This below chunk of code is error message debugger code that I haven't finished yet.
@@ -30,7 +35,8 @@ while True:
 #					if not area_of_update_team.isnumeric():
 #						print("Input is not valid.")
 #			elif area_of_update_team == "new_team_camera_vision":
-#				if value.lower() != "yes" and value.lower() != "no":
+#				if value != "yes" and value != "no":
+
 #
 #
 #
@@ -42,41 +48,43 @@ while True:
 	elif user_action == "add": 
 		new_team = int(input("Enter the number of the team you want to add."))
 		teams[new_team] = {}
-		new_team_name = input("What is the team's name?")
-		teams[new_team]["name"] = new_team_name
-		new_team_programming_language = input("What programming language does the team use?")
-		teams[new_team]["programming language"] = new_team_programming_language
-		new_team_robot_width = input("What is the width of the team's robot?")
-		teams[new_team_name]["width of robot"] = new_team_robot_width
-		new_team_robot_length = int(input("What is the length of the team's robot?"))
-		teams[new_team_name]["length of robot"] = new_team_robot_length
-		new_team_camera_vision = int(input("Does the team have a camera vision system?"))
-		teams[new_team_name]["camera vision"] = new_team_camera_vision
-		new_team_number_of_drivetrain_motors = input("How many drivetrain motors does the robot have?")
-		teams[new_team]["number of drivetrain motors"] = new_team_number_of_drivetrain_motors
+		name = input("What is the team's name?")
+		teams[new_team]["name"] = name 
+		language = input("What programming language does the team use?")
+		teams[new_team]["programming language"] = language
+		width = input("What is the width of the team's robot?")
+		teams[new_team]["width of robot"] = width
+		length = int(input("What is the length of the team's robot?"))
+		teams[new_team]["length of robot"] = length
+		camera_vision = input("Does the team have a camera vision system?")
+		teams[new_team]["camera vision"] = camera_vision
+		drivetrain_motors = input("How many drivetrain motors does the robot have?")
+		teams[new_team]["number of drivetrain motors"] = drivetrain_motors
 		print("Returning to main menu...")
-		return 
+		continue 
 	
 	elif user_action == "view team information": 
-		view_team_input = input("Which team's information would you like to view? To return to the menu, press 0.")
-		if view_team_input == "0":
-			return
-		elif view_team_input in teams(): 
-			print(teams[view_team_input])
+		view_input = input("Which team's information would you like to view? To continue to the menu, press 0.")
+		if view_input == "0":
+			continue
+		elif view_input in teams(): 
+			print(teams[view_input])
 		else: 
-			print("Team" + view_team_input + " has not been found. Returning to main menu...")
-			return
+			print("Team" + view_input + " has not been found. Returning to main menu...")
+			continue
 	
 	elif user_action == "search": 
-		search_team_input = input("Which team would you like to search for? To return to the main menu, enter 0.")
-		if search_team_input in teams.keys():
-			print(teams[search_team_input])
-		else
+		search_input = input("Which team would you like to search for? To return to the main menu, enter 0.")
+		if search_input == "0":
+			continue
+		elif search_input in teams.keys():
+			print(teams[search_input])
+		else:
 			print("Team does not exist. Returning to main menu...")
 			break
 	
 	elif user_action == "quit":
 		break
 #To not receive an error message in the add function, could I define each variable seperately and make an if/else/elif statement?
-#Can I loop the code instead of making it return to the main menu?
-#Have not tested entire code/done validation yet. 	
+#Can I loop the code instead of making it continue to the main menu?
+#Have not tested entire code/done validation yet. 
