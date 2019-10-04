@@ -57,7 +57,7 @@ while True:
 		if not new_team.isnumeric():
 			print("Must be a number. Returning to menu... ")
 			continue
-		elif new_team == 0:
+		elif new_team == "0":
 			continue
 		else:
 			new_team = int(new_team)
@@ -99,9 +99,8 @@ while True:
 		if not view_input.isnumeric():
 			print("Team must be a number. Returning	to menu... ")
 			continue
-		elif view_input == int(0):
+		elif view_input == 0:
 			continue
-		view_input = int(view_input)
 		elif view_input in teams: 
 			print(teams[view_input])
 			continue
