@@ -99,7 +99,10 @@ while True:
 		if not view_input.isnumeric():
 			print("Team must be a number. Returning	to menu... ")
 			continue
-		elif view_input == 0:
+
+		view_input = int(view_input)
+
+		if view_input == 0:
 			continue
 		elif view_input in teams: 
 			print(teams[view_input])
