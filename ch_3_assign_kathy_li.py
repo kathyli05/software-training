@@ -110,7 +110,6 @@ def modify_team():
 		print("Team " + str(update_team) + " was not found. Returning to menu... ")
 
 def quit_program():
-	##break
 	print("Use Ctrl-C to exit the program.")
 
 master_action()
