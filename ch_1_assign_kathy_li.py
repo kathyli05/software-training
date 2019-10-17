@@ -1,6 +1,6 @@
 #This is the dictionary that stores all the information about the teams.
 teams_info = {
-	1678 : {
+	1678: {
 		'location': 'Davis, California, USA', 
 		'rookie year': 2005,
 		'competed in 2019?': True,
@@ -25,7 +25,7 @@ teams_info = {
 			'Winner, 2019 Carver Division - Houston Championship',
 		]
 	},
-	1868 : {
+	1868: {
 		'location': 'Mountain View, California, USA',
 		'rookie year': 2006,
 		'competed in 2019?': True,
@@ -41,7 +41,7 @@ teams_info = {
 			'Entrepreneurship Award (sponsored by Kleiner Perkins Caufield and Byers), Silicon Valley Regional',
 		]
 	},
-	1323 : {
+	1323: {
 		'location': 'Madera, California, USA',
 		'rookie year': 2004,
 		'competed in 2019?': True,
@@ -61,7 +61,7 @@ teams_info = {
 			'Winner, 2019 Houston Championship',
 		]
 	},
-	3132 : {
+	3132: {
 		'location': 'Sydney, Australia',
 		'rookie year': 2010,
 		'competed in 2019?': True,
@@ -81,7 +81,7 @@ teams_info = {
 			'Winner, 2019 Carver Division - Houston Championship',
 		]
 	},
-	254 : {
+	254: {
 		'location': 'San Jose, California, USA',
 		'rookie	year': 1999,
 		'competed in 2019?': True,
@@ -105,6 +105,6 @@ teams_info = {
 	},
 }
 team_input = int(input('Choose an FRC team: 1678, 1868, 1323, 3132, or 254.\n'))
-team_attribute = str(input('Enter an attribute: "Location", "Rookie Year", "Competed in 2019?", "2019 Competitions", and "2019 Season Awards".\n').lower())
+team_attribute = input('Enter an attribute: "Location", "Rookie Year", "Competed in 2019?", "2019 Competitions", and "2019 Season Awards".\n').lower()
 #without .lower(), user input is case-sensitive.
 print(teams_info[team_input][team_attribute])
