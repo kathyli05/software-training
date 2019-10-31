@@ -23,4 +23,3 @@ print(point.distance())
 z = int(input("What is the z-value of your point? \n"))
 point = Point_3D(x, y, z)
 print(point.distance())
-
