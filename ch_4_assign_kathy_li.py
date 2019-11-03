@@ -20,6 +20,8 @@ y = int(input("what is the y-value of your point? \n"))
 point_a = Point(x, y)
 print("The distance from the origin is " + str(point_a.distance()))
 
+x = int(input("What is the x-value of your point? \n" ))
+y = int(input("what is the y-value of your point? \n"))
 z = int(input("What is the z-value of your point? \n"))
 point_b = Point_3D(x, y, z)
 print("The distance from the origin is " + str(point_b.distance()))
@@ -29,4 +31,4 @@ if point_a.distance() > point_b.distance():
 elif point_b.distance() > point_a.distance():
     print("The 3D point is further from the origin than the 2D point.")
 elif point_a.distance() == point_b.distance():
-    print("The points are the same length.")
+    print("The points are the same distance from the origin.")
