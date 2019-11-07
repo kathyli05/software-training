@@ -26,7 +26,7 @@ while True:
 				continue
 			elif update_team in teams.keys():
 				update_variable = input("Which field would you like to modify: name, programming language, width, length, number of drivetrain motors, or camera vision? \n")
-				if update_variable not in teams[new_team].keys():
+				if update_variable not in teams[update_team].keys():
 					print("There is no such field. ")
 					continue
 				change = input("Enter the new value. \n")
@@ -132,3 +132,6 @@ while True:
 			continue
 	elif user_action == "quit":
 		break
+	else:
+		print("Invalid action.")
+		continue
