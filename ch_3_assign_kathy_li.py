@@ -22,13 +22,13 @@ def list_teams():
     print(teams)
 
 def remove_team():
+	delete_team = input("Which team would you like to remove? \n")
 	if delete_team.isnumeric():
 		if delete_team in teams.keys():
 			teams.pop(delete_team)
 			print("Team " + str(delete_team) + " has been removed.   ")
 			return
-		else:	delete_team = input("Which team would you like to remove? \n")
-
+		else:
 			print("Team " + str(delete_team) + " has not been found.   ")
 			return
 	else: 
